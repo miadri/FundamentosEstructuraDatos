@@ -1,0 +1,60 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+
+
+public class Rombo {
+
+    public static void main(String[] arguments) throws NumberFormatException, IOException {
+     /**    InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        bw.write("ingrese el numero de la matriz"); 
+        bw.flush();
+        int m=  Integer.parseInt(br.readLine());
+        
+        bw.write("introduza los numeros separados por comas");
+        bw.flush();
+        String[] n_comas = br.readLine().split(","); **/
+        int m = 10;
+        int arreglo[][] = new int [m][m];
+        int matriz[][]= new int [m][m];
+        int contador = 0;
+      
+        
+        
+       // int mat[][] = new int[n][n];
+    
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < m; j++) {
+                if (i + j>=(m / 2)&& i+(m/ 2)>= j && j+(m / 2)>=i && i+j<=(m / 2)+m-1) {
+                    matriz[i][j] = contador;
+                  
+                    if (j < m / 2) {
+                        contador++;
+                    } else {
+                        contador--;
+                    }
+
+                } else {
+                    matriz[i][j] = 0;
+
+                }
+
+            }
+            contador = 1;
+
+        }
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < m; j++) {
+                System.out.print(matriz[i][j] + " ");
+
+            }
+            System.out.println();
+
+        }
+
+    }
+}
