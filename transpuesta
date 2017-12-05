@@ -1,0 +1,40 @@
+#define MAX 10
+
+ /*
+ 
+  this program ejecut exercice 
+*/
+#include<stdio.h>
+
+int main()
+{
+int matriz[MAX][MAX],N, i=0, j=0;
+  printf("ingrese numero de columnas: ");
+  scanf("%d", N);
+ // printf("ingrese numero de filas:  ");
+  //scanf("%d", &N);
+  for(i = 0;i < N;i++)  // the data is read
+  {
+      for(j = 0;j < N;j++){
+          printf("ESCRIBE LOS VALORES [%d][%d]==>\t", i+1, j+1);
+              scanf("%d", &matriz[i][j]);
+      }
+  }
+  printf("\n\n\t\tMatriz original");/*print matriz */
+  printf("\n\n");
+  for(i = 0;i < N;i++){ // 
+      printf("\n\t\t");
+      for(j = 0;j < N;j++){
+          printf("  %6d  ", matriz[i][j]);
+          }
+  }
+  printf("\n\n\t\tMatriz transpuesta");
+  printf("\n\n");
+  for(i = 0;i < N;i++){
+      printf("\n\t\t");
+      for(j = 0;j < N;j++){
+          printf("  %6d  ", matriz[j][i]);
+          }
+  }
+  printf("\n\n\n");
+    }
